@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produktliste</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/productlist.css" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="logo" href="index.html">FashionRUs</a>
+
+      <nav class="menu">
+        <a href="index.html">Kategorier</a>
+        <a href="productlist.html">Produkter</a>
+      </nav>
+    </header>
+
+    <main class="indhold">
+      <h1>Accessories</h1>
+
+      <section class="produkt_liste">
+        <!-- 1: normalt produkt -->
+        <article class="produkt_kort">
+          <a class="produkt_link" href="product.html">
+            <img
+              class="produkt_billede"
+              src="https://kea-alt-del.dk/t7/images/webp/640/1532.webp"
+              alt="Produktbillede"
+            />
+            <h2 class="produkt_navn">Produktnavn 1</h2>
+          </a>
+          <p class="produkt_brand">Brand: Nike</p>
+          <p class="produkt_pris">Pris: 399 kr</p>
+        </article>
+
+        <!-- 2: tilbud -->
+        <article class="produkt_kort tilbud">
+          <span class="badge">Tilbud</span>
+          <a class="produkt_link" href="product.html">
+            <img
+              class="produkt_billede"
+              src="https://kea-alt-del.dk/t7/images/webp/640/1525.webp"
+              alt="Produktbillede"
+            />
+            <h2 class="produkt_navn">Produktnavn 2</h2>
+          </a>
+          <p class="produkt_brand">Brand: Adidas</p>
+          <p class="produkt_pris">
+            <span class="gammel_pris">499 kr</span>
+            <span class="ny_pris">299 kr</span>
+          </p>
+        </article>
+
+        <!-- 3: udsolgt -->
+        <article class="produkt_kort udsolgt">
+          <span class="badge">Udsolgt</span>
+          <a class="produkt_link" href="product.html">
+            <img
+              class="produkt_billede"
+              src="https://kea-alt-del.dk/t7/images/webp/640/1164.webp"
+              alt="Produktbillede"
+            />
+            <h2 class="produkt_navn">Produktnavn 3</h2>
+          </a>
+          <p class="produkt_brand">Brand: Puma</p>
+          <p class="produkt_pris">Pris: 249 kr</p>
+        </article>
+
+        <!-- 4: både tilbud + udsolgt -->
+        <article class="produkt_kort tilbud udsolgt">
+          <span class="badge">Tilbud</span>
+          <span class="badge">Udsolgt</span>
+          <a class="produkt_link" href="product.html">
+            <img
+              class="produkt_billede"
+              src="https://kea-alt-del.dk/t7/images/webp/640/1165.webp"
+              alt="Produktbillede"
+            />
+            <h2 class="produkt_navn">Produktnavn 4</h2>
+          </a>
+          <p class="produkt_brand">Brand: Reebok</p>
+          <p class="produkt_pris">
+            <span class="gammel_pris">399 kr</span>
+            <span class="ny_pris">199 kr</span>
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="bund">
+      <p>© FashionRUs</p>
+    </footer>
+  </body>
+</html>
