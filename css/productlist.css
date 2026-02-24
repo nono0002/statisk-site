@@ -1,0 +1,59 @@
+.produkt_liste {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  .produkt_liste {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .produkt_liste {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.produkt_kort {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  background: #fff;
+}
+
+.produkt_link {
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+  gap: 8px;
+}
+
+.produkt_billede {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #f3f3f3;
+  border-radius: 6px;
+}
+
+.produkt_navn {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.produkt_brand,
+.produkt_pris {
+  font-size: 14px;
+}
+
+.tilbud .badge {
+  background: #c2410c;
+}
+
+.udsolgt .badge {
+  background: #666;
+}

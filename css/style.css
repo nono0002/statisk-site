@@ -1,11 +1,99 @@
-/* Simple CSS Reset */
+/* ===== RESET / GRUND ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  color: #111;
+}
+
+/* ===== FÆLLES LAYOUT ===== */
+.indhold {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== HEADER ===== */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px 20px;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #111;
+}
+
+.menu {
+  display: flex;
+  gap: 14px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #111;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  background: #f2f2f2;
+}
+
+/* ===== FOOTER ===== */
+.bund {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  color: #444;
+}
+
+/* ===== GENERELLE “HJÆLPE-CLASSES” ===== */
+.badge {
+  display: inline-flex;
+  align-items: center; /* vertikal centrering */
+  justify-content: center; /* horisontal centrering */
+
+  padding: 6px 14px;
+  font-size: 12px;
+
+  background: #111;
+  color: #fff;
+
+  border-radius: 999px;
+}
+
+.gammel_pris {
+  text-decoration: line-through;
+  color: #666;
+  margin-right: 8px;
+}
+
+.ny_pris {
+  font-weight: 700;
+}
+
+.udsolgt {
+  opacity: 0.55;
 }

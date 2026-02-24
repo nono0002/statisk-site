@@ -1,0 +1,50 @@
+.tilbage {
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+  color: #111;
+}
+
+.tilbage:hover {
+  text-decoration: underline;
+}
+
+.produkt_side {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr;
+  margin-top: 20px;
+}
+
+@media (min-width: 800px) {
+  .produkt_side {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.produkt_stort_billede {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f3f3f3;
+}
+
+.produkt_info {
+  display: grid;
+  gap: 10px;
+}
+
+.koeb_knap {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.koeb_knap:hover {
+  opacity: 0.9;
+}
