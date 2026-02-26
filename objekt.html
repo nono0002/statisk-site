@@ -12,26 +12,48 @@
       <section id="personListe"></section>
     </main>
     <script>
-      const person = {
-        navn: "Noah",
-        årstal: "2004",
-        dato: "29/6",
-        email: "nono0002@stud.ek.dk",
-      };
+      const personer = [
+        {
+          navn: "Noah",
+          årstal: "2004",
+          dato: "29/6",
+          email: "nono0002@stud.ek.dk",
+          navne: ["noki", "nokzen", "joe"],
+        },
+        {
+          navn: "Iva",
+          årstal: "2008",
+          dato: "9/9",
+          email: "ivi0008@stud.ek.dk",
+          navne: ["Ivi", "Ivan", "mali"],
+        },
+        {
+          navn: "Senada",
+          årstal: "1981",
+          dato: "25/6",
+          email: "seni0081@stud.ek.dk",
+          navne: ["Seni", "Senci", "mom"],
+        },
+      ];
 
       const personListe = document.querySelector("#personListe");
 
-      function showPerson() {
-        console.log(person);
-        personListe.innerHTML = `
-          <article class="personkort">
-            <h2>${person.navn}</h2>
-            <p>${person.dato} ${person.årstal}</p>
-            <p>${person.email}</p>
-          </article> `;
+      function showPersoner() {
+        console.log(personer[2].email);
+
+        personer.forEach((person) => {
+          personListe.innerHTML += `
+            <article class="personkort">
+              <h2>${person.navn}</h2>
+              <p>${person.dato} ${person.årstal}</p>
+              <p>${person.email}</p>
+              <p>${person.navne.join(", ")}</p>
+            </article>
+          `;
+        });
       }
 
-      showPerson();
+      showPersoner();
     </script>
   </body>
 </html>
