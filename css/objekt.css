@@ -1,0 +1,53 @@
+/* Grid container (klar til flere kort) */
+#personListe {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Personkort */
+.personkort {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Lille accent-bar */
+.personkort::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: #3b82f6;
+}
+
+/* Hover */
+.personkort:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Indhold */
+.personkort h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.personkort p {
+  margin-bottom: 0.5rem;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.personkort p:last-child {
+  color: #64748b;
+  font-size: 0.85rem;
+}
