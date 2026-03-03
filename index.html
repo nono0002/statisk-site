@@ -3,25 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forside</title>
+    <title>FashionRUs</title>
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <script src="json.js" defer></script>
+
+    <!-- Dynamisk categories -->
+    <script src="js/index.js" defer></script>
   </head>
+
   <body>
     <header class="top">
       <a class="logo" href="index.html">FashionRUs</a>
 
       <nav class="menu">
         <a href="index.html">Kategorier</a>
-        <a href="productlist.html">Produkter</a>
       </nav>
     </header>
 
     <main class="indhold">
-      <h1>Kategorier</h1>
+      <section class="hero">
+        <h1>Shop Categories</h1>
+        <p class="hero_intro">
+          Udforsk vores udvalg af kategorier og find dine favoritter.
+        </p>
+      </section>
 
-      <section class="kategori_liste"></section>
+      <section class="kategori_section">
+        <div class="kategori_liste">
+          <!-- Fallback hvis JS ikke loader -->
+          <a href="productlist.html?category=Accessories" class="kategori_kort">
+            Accessories
+          </a>
+          <a href="productlist.html?category=Apparel" class="kategori_kort">
+            Apparel
+          </a>
+          <a href="productlist.html?category=Footwear" class="kategori_kort">
+            Footwear
+          </a>
+          <a href="productlist.html?category=Free Items" class="kategori_kort">
+            Free Items
+          </a>
+          <a
+            href="productlist.html?category=Personal Care"
+            class="kategori_kort"
+          >
+            Personal Care
+          </a>
+          <a
+            href="productlist.html?category=Sporting Goods"
+            class="kategori_kort"
+          >
+            Sporting Goods
+          </a>
+        </div>
+      </section>
     </main>
 
     <footer class="bund">
