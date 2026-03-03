@@ -1,6 +1,6 @@
 const endpoint = "https://kea-alt-del.dk/t7/api/categories";
 
-const container = document.querySelector("#kategori_liste");
+const container = document.querySelector(".kategori_liste");
 
 function getData() {
   fetch(endpoint)
@@ -10,9 +10,16 @@ function getData() {
 
 function showData(data) {
   console.log(data);
+  let markup = "";
   data.forEach((respons) => {
-    container.innerHTML += `<a href="productlist.html">${respons.category}</a>`;
+    markup += `<a href="productlist.html">${respons.category}</a>`;
   });
+  container.innerHTML = markup;
 }
+
+// function showData(json) {
+//   console.log(json);
+//   container.innerHTML;
+// }
 
 getData();
