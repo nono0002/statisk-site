@@ -1,99 +1,405 @@
-/* ===== RESET / GRUND ===== */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+html {
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.4;
   color: #111;
+  background: #fff;
+  line-height: 1.5;
 }
 
-/* ===== FÆLLES LAYOUT ===== */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* LAYOUT */
 .indhold {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2rem 1rem;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
+.top {
+  border-bottom: 1px solid #eaeaea;
+  background: #fafafa;
+}
+
 .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 16px 20px;
-
-  border-bottom: 1px solid #ddd;
+  padding: 1rem 1rem;
 }
 
 .logo {
-  font-size: 20px;
   font-weight: 700;
-  text-decoration: none;
-  color: #111;
-}
-
-.menu {
-  display: flex;
-  gap: 14px;
+  font-size: 1.2rem;
+  letter-spacing: 0.3px;
 }
 
 .menu a {
-  text-decoration: none;
-  color: #111;
-  padding: 6px 8px;
-  border-radius: 6px;
+  margin-left: 1rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
 }
 
 .menu a:hover {
-  background: #f2f2f2;
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 .bund {
-  margin-top: 40px;
-  padding: 20px;
+  border-top: 1px solid #eaeaea;
+  padding: 1.25rem 1rem;
   text-align: center;
-  border-top: 1px solid #ddd;
-  color: #444;
+  opacity: 0.7;
 }
 
-/* ===== GENERELLE “HJÆLPE-CLASSES” ===== */
-.badge {
-  display: inline-flex;
-  align-items: center; /* vertikal centrering */
-  justify-content: center; /* horisontal centrering */
+/* HERO forside */
+.hero {
+  margin-bottom: 2rem;
+}
 
-  padding: 6px 14px;
-  font-size: 12px;
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
 
-  background: #111;
-  color: #fff;
+.hero_intro {
+  opacity: 0.75;
+}
 
+/* KATEGORIER forside */
+.kategori_section {
+  margin-top: 1.5rem;
+}
+
+.kategori_liste {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.kategori_kort {
+  border: 1px solid #eaeaea;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.kategori_kort:hover {
+  background: #f6f6f6;
+}
+
+/* PRODUKTLISTE */
+.kategori_titel,
+.indhold h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.filter_knapper {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.filterbutton {
+  padding: 0.65rem 0.9rem;
   border-radius: 999px;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  font-size: 0.95rem;
 }
 
-.gammel_pris {
-  text-decoration: line-through;
-  color: #666;
-  margin-right: 8px;
+.filterbutton:hover {
+  background: #f2f2f2;
+  cursor: pointer;
 }
 
-.ny_pris {
+/* Produkt grid */
+.produkt_liste {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Kort */
+.produkt_kort {
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  padding: 0.75rem;
+}
+
+.produkt_link {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.produkt_billede {
+  border-radius: 10px;
+  border: 1px solid #f0f0f0;
+}
+
+.produkt_navn {
+  font-size: 1rem;
   font-weight: 700;
 }
 
-.udsolgt {
-  opacity: 0.55;
+.produkt_brand {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-top: 0.25rem;
+}
+
+.produkt_pris {
+  margin-top: 0.4rem;
+  font-weight: 700;
+}
+
+.gammel_pris {
+  font-weight: 600;
+  opacity: 0.6;
+  text-decoration: line-through;
+  margin-right: 0.5rem;
+}
+
+.ny_pris {
+  font-weight: 800;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-right: 0.4rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #e3e3e3;
+  background: #f7f7f7;
+}
+
+.produkt_kort.udsolgt {
+  opacity: 0.65;
+}
+
+.rabat_procent {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+}
+
+.tilbage {
+  display: inline-block;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.tilbage:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.produkt_side {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.produkt_stort_billede {
+  border-radius: 14px;
+  border: 1px solid #eaeaea;
+}
+
+.produkt_info {
+  border: 1px solid #eaeaea;
+  border-radius: 14px;
+  padding: 1rem;
+  background: #fff;
+}
+
+.lagerstatus {
+  margin-top: 0.75rem;
+  opacity: 0.8;
+}
+
+.koeb_knap {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  font-weight: 700;
+}
+
+.koeb_knap:hover {
+  background: #2a2a2a;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (min-width: 800px) {
+  .kategori_liste {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .produkt_liste {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .produkt_side {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+  }
+
+  .top {
+    padding: 1rem 2rem;
+  }
+
+  .indhold {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* FILTER + SORTERING (minimal) */
+.filter_knapper,
+.sortering_knapper {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.filterbutton,
+.sortbutton {
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  font-size: 0.95rem;
+}
+
+.filterbutton:hover,
+.sortbutton:hover {
+  cursor: pointer;
+  background: #f2f2f2;
+}
+
+/* lidt luft mellem filter og sort */
+.sortering_knapper {
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- FIX: styling til productlist.js markup (minimal) --- */
+
+/* grid container (du bruger .produkt_liste i HTML) */
+.produkt_liste a {
+  display: block;
+}
+
+/* produktkort fra JS: .produkt-pic */
+.produkt-pic {
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  padding: 0.75rem;
+}
+
+/* billedet */
+.product-image {
+  border-radius: 10px;
+  border: 1px solid #f0f0f0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* FADING: når produkt er sold out (JS giver .soldout på article) */
+.produkt-pic.soldout .product-image {
+  opacity: 0.6;
+}
+
+/* Sold out badge (din HTML har den allerede) */
+.soldout {
+  position: relative;
+}
+
+.sold-out-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+}
+
+/* Tekst */
+.subtitle {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-top: 0.25rem;
+}
+
+.price {
+  margin-top: 0.4rem;
+  font-weight: 700;
+}
+
+/* Rabat: din JS bruger .sale + .bgsale */
+.sale {
+  margin-top: 0.35rem;
+  font-weight: 800;
+}
+
+.bgsale {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
 }
