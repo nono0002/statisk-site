@@ -6,7 +6,7 @@
     <title>Produktliste</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/productlist.css" />
-    <script src="productlist.js" defer></script>
+    <script src="js/productlist.js" defer></script>
   </head>
   <body>
     <header class="top">
@@ -19,74 +19,18 @@
     </header>
 
     <main class="indhold">
-      <h1>Accessories</h1>
+      <h1 class="kategori_titel">Kategori</h1>
+
+      <!-- filter knapper (slides) -->
+      <section class="filter_knapper">
+        <button class="filterbutton">All</button>
+        <button class="filterbutton">Unisex</button>
+        <button class="filterbutton">Women</button>
+        <button class="filterbutton">Men</button>
+      </section>
 
       <section class="produkt_liste">
-        <!-- 1: normalt produkt -->
-        <article class="produkt_kort">
-          <a class="produkt_link" href="productdetails.html">
-            <img
-              class="produkt_billede"
-              src="https://kea-alt-del.dk/t7/images/webp/640/1532.webp"
-              alt="Produktbillede"
-            />
-            <h2 class="produkt_navn">Produktnavn 1</h2>
-          </a>
-          <p class="produkt_brand">Brand: Nike</p>
-          <p class="produkt_pris">Pris: 399 kr</p>
-        </article>
-
-        <!-- 2: tilbud -->
-        <article class="produkt_kort tilbud">
-          <span class="badge">Tilbud</span>
-          <a class="produkt_link" href="productdetails.html">
-            <img
-              class="produkt_billede"
-              src="https://kea-alt-del.dk/t7/images/webp/640/1525.webp"
-              alt="Produktbillede"
-            />
-            <h2 class="produkt_navn">Produktnavn 2</h2>
-          </a>
-          <p class="produkt_brand">Brand: Adidas</p>
-          <p class="produkt_pris">
-            <span class="gammel_pris">499 kr</span>
-            <span class="ny_pris">299 kr</span>
-          </p>
-        </article>
-
-        <!-- 3: udsolgt -->
-        <article class="produkt_kort udsolgt">
-          <span class="badge">Udsolgt</span>
-          <a class="produkt_link" href="productdetails.html">
-            <img
-              class="produkt_billede"
-              src="https://kea-alt-del.dk/t7/images/webp/640/1164.webp"
-              alt="Produktbillede"
-            />
-            <h2 class="produkt_navn">Produktnavn 3</h2>
-          </a>
-          <p class="produkt_brand">Brand: Puma</p>
-          <p class="produkt_pris">Pris: 249 kr</p>
-        </article>
-
-        <!-- 4: både tilbud + udsolgt -->
-        <article class="produkt_kort tilbud udsolgt">
-          <span class="badge">Tilbud</span>
-          <span class="badge">Udsolgt</span>
-          <a class="produkt_link" href="productdetails.html">
-            <img
-              class="produkt_billede"
-              src="https://kea-alt-del.dk/t7/images/webp/640/1165.webp"
-              alt="Produktbillede"
-            />
-            <h2 class="produkt_navn">Produktnavn 4</h2>
-          </a>
-          <p class="produkt_brand">Brand: Reebok</p>
-          <p class="produkt_pris">
-            <span class="gammel_pris">399 kr</span>
-            <span class="ny_pris">199 kr</span>
-          </p>
-        </article>
+        <!-- JS indsætter produkter her -->
       </section>
     </main>
 
