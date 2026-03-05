@@ -13,12 +13,10 @@ fetch(endpoint)
     document.querySelector(".produkt_brand").textContent =
       `Brand: ${product.brandname}`;
 
-    // lagerstatus
     document.querySelector(".lagerstatus").textContent = product.soldout
       ? "Lagerstatus: Udsolgt"
       : "Lagerstatus: På lager";
 
-    // pris (med/uden rabat)
     const oldPrice = document.querySelector(".gammel_pris");
     const newPrice = document.querySelector(".ny_pris");
 

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Produktliste</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/productlist.css" />
     <script src="js/productlist.js" defer></script>
   </head>
   <body>
@@ -21,17 +20,24 @@
     <main class="indhold">
       <h1 class="kategori_titel">Kategori</h1>
 
-      <!-- filter knapper (slides) -->
       <section class="filter_knapper">
         <button class="filterbutton">All</button>
         <button class="filterbutton">Unisex</button>
         <button class="filterbutton">Women</button>
         <button class="filterbutton">Men</button>
       </section>
-
-      <section class="produkt_liste">
-        <!-- JS indsætter produkter her -->
+      <section class="sortering_knapper">
+        <button class="sortbutton" data-sort="price" data-dir="asc">
+          Pris: Lav-Høj
+        </button>
+        <button class="sortbutton" data-sort="price" data-dir="desc">
+          Pris: Høj-lav
+        </button>
+        <button class="sortbutton" data-sort="name" data-dir="asc">A-Z</button>
+        <button class="sortbutton" data-sort="name" data-dir="desc">Z-A</button>
       </section>
+
+      <section class="produkt_liste"></section>
     </main>
 
     <footer class="bund">
